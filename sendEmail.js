@@ -12,14 +12,14 @@ function sendEmail() {
     .getRange(formresp.getLastRow(), 1, 1, formresp.getLastColumn())
     .getDisplayValues();
 
-  // The spreadsheet column numbers are: 0-date, 1-name, 2-id, 3-amount, 4-duration, 5-email, 6-loanstatus, 7-repaymentstatus, 8-rejectionreason
+  // The spreadsheet column numbers are: 0-date, 1-email, 2-name, 3-id, 4-amount, 5-duration, 6-loanstatus, 7-repaymentstatus, 8-rejectionreason
   var loanStatus = recentResponse[0][6]; // assuming the loanStatus the 7th column
-  var email = recentResponse[0][5]; // assuming the email the 6th column
-  var name = recentResponse[0][1]; // assuming the name the 2nd column
-  var id = recentResponse[0][2]; // assuming the id is the 3rd column
-  var loanAmount = recentResponse[0][3]; // assuming the loanAmount the 4th column
-  var loanDuration = recentResponse[0][4]; // assuming the loanDuration the 5th column
-  var reason = recentResponse[0][8]; // assuming the reason the 8th column
+  var email = recentResponse[0][1]; // assuming the email the 2nd column
+  var name = recentResponse[0][2]; // assuming the name the 3rd column
+  var id = recentResponse[0][3]; // assuming the id is the 4th column
+  var loanAmount = recentResponse[0][4]; // assuming the loanAmount the 5th column
+  var loanDuration = recentResponse[0][5]; // assuming the loanDuration the 6th column
+  var reason = recentResponse[0][8]; // assuming the reason the 9th column
   var htmlTemplate;
   if (loanStatus == "Accepted") {
     htmlTemplate = HtmlService.createTemplateFromFile("acceptedEmail");
