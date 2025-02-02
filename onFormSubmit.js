@@ -8,10 +8,10 @@ function onFormSubmit(e) {
 
 function updateStatus(e) {
   // Get the user's Id and applied loan amount from the submitted form.
-  // The following are the index values 0-date, 1-name, 2-id, 3-amount, 4-loanduration, 5-gurantors, 6-email - this follows the form inputs
-  var userId = e.values[2].toString(); // assuming user id is the third column
-  var userEmail = e.values[5].toString();
-  var appliedAmount = e.values[3]; // assuming the applied amount is the fourth column
+  // The following are the index values 0-date,1-email,  2-name, 3-id, 4-amount, 5-loanduration, 6-gurantors,  - this follows the form inputs
+  var userId = e.values[3].toString(); // assuming user id is the third column
+  var userEmail = e.values[1].toString();
+  var appliedAmount = e.values[4]; // assuming the applied amount is the fourth column
 
   // Get the user's limit from the members list sheet: 0-name, 1-email, 2-id, 3-limit
   var membersSheet =
@@ -38,8 +38,8 @@ function updateStatus(e) {
   }
 
   // Check for outstanding loans
-  // The spreadsheet column numbers are: 0-date, 1-name, 2-id, 3-amount, 4-duration, 5-email, 6-loanstatus, 7-repaymentstatus, 8-rejectionreason
-  var idColumn = 2;
+  // The spreadsheet column numbers are: 0-date, 1-email, 2-name, 3-id, 4-amount, 5-duration, 6-loanstatus, 7-repaymentstatus, 8-rejectionreason
+  var idColumn = 3;
   var statusColumn = 6;
   var repaymentColumn = 7;
   var sheetID =

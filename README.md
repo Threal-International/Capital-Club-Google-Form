@@ -16,22 +16,26 @@ This is a repo containing capital club google form for a loan application
 - You should have a form that looks like this:
 ![google form for loan application](images/loan-form.png)
 
+### 2. Add email as a response option
+- Go to form settings
+- In responses, click on collect email addresses and select verified to use the email a user is logged in with
+![adding response email addresses](images/settings.png)
+
 ### 2. Add Sheets
 - Once you add all the field, go to the Responses and link to sheets
 ![link to create a sheet](images/link-sheets.png)
 
 - Open the sheet and add the following extra fields to the sheet:
-    1. Email Address
-    2. Loan Status.  
-    Make this column a dropdown and add the following dropdown fields 
+    1. Loan Status.  
+    2. Repayment status
+     Make this column a dropdown and add the following dropdown fields 
         - In progress
         - Paid
         - Application rejected
         - Awaiting remittance
         - Defaulted
         ![loan status dropdown](images/loan-status.png)
-    3. Repayment status
-    4. Rejection Reason
+    3. Rejection Reason
 
 - Add a new sheet called Members list and add The following columns in the following order:
     1. Full Name
