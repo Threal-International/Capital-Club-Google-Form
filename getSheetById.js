@@ -1,5 +1,4 @@
 function getSheetById(sheet_id) {
-
   //access the workbook
   var wb = SpreadsheetApp.getActiveSpreadsheet();
 

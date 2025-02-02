@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <base target="_top" />
+  </head>
 
-<head>
-  <base target="_top">
-</head>
+  <body>
+    <p>
+      Dear
+      <?= name ?>
+    </p>
 
-<body>
-  <p>Dear
-    <?= name ?>
-  </p>
+    <p>Your loan application has been approved.</p>
 
-  <p>Your loan application has been approved.</p>
+    <b>Loan Details</b>
+    <div>
+      <b>Loan amount: </b>
+      <span><?= loanAmount ?></span>
+    </div>
+    <div>
+      <b>Loan duration: </b>
+      <span><?= loanDuration ?></span>
+    </div>
 
-  <b>Loan Details</b>
-  <div><b>Loan amount: </b>
-    <span><?= loanAmount ?></span>
-  </div>
-  <div><b>Loan duration: </b>
-    <span><?= loanDuration ?></span>
-  </div>
+    <p>We will contact you shortly with further details.</p>
 
-  <p>We will contact you shortly with further details.</p>
-
-  <br/>
-  <div>
-    <p>Best Regards,</p>
-    <p>Loan Team</p>
-  </div>
-</body>
-
+    <br />
+    <div>
+      <p>Best Regards,</p>
+      <p>Loan Team</p>
+    </div>
+  </body>
 </html>
